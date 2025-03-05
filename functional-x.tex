@@ -81,4 +81,20 @@
     }
 \end{frame}
 
+\begin{frame}{Euclid}
+
+  \[
+\textbf{euclid} \quad : \quad (\mathbb{N} \times \mathbb{N}) \to \mathbb{N}
+\]
+
+\[
+\textbf{euclid}(m, n) =
+\begin{cases}
+    \textbf{euclid}(n, m \bmod n), & \text{if } n > 0 \\
+    m, & \textbf{otherwise}
+\end{cases}
+\]
+
+\end{frame}
+
 \end{document}
