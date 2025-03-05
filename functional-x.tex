@@ -1,0 +1,40 @@
+\documentclass[12pt,t]{beamer}
+\usepackage{graphicx}
+\setbeameroption{hide notes}
+\setbeamertemplate{note page}[plain]
+
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+\hypersetup{pdfpagemode=UseNone} % don't show bookmarks on initial view
+
+% font
+\usepackage{fontspec}
+\setsansfont{Helvetica}
+\setbeamerfont{note page}{family*=pplx,size=\footnotesize}
+
+% page number
+\setbeamertemplate{footline}{%
+  \raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[20pt]{\color{gray}
+      \scriptsize\insertframenumber}}}\hspace*{5pt}}
+
+% add a bit of space at the top of the notes page
+\addtobeamertemplate{note page}{\setlength{\parskip}{12pt}}
+
+% a few macros
+
+
+% title into
+\title{Functional X}
+
+\begin{document}
+
+% title slide
+{
+\setbeamertemplate{footline}{} % no page number here
+\frame{
+  \titlepage
+  \note{These are slides for a talk I will give on XX XXX 202X, at ...}
+}
+}
+
+\end{document}
