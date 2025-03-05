@@ -1,5 +1,5 @@
 \documentclass[12pt,t]{beamer}
-\usepackage{graphicx}
+\usepackage{amsmath, amssymb, graphicx}
 \setbeameroption{hide notes}
 \setbeamertemplate{note page}[plain]
 
@@ -12,6 +12,32 @@
 \setsansfont{Helvetica}
 \setbeamerfont{note page}{family*=pplx,size=\footnotesize}
 
+% named colors
+\definecolor{offwhite}{RGB}{249,242,215}
+\definecolor{foreground}{RGB}{255,255,255}
+\definecolor{background}{RGB}{24,24,24}
+\definecolor{title}{RGB}{107,174,214}
+\definecolor{gray}{RGB}{155,155,155}
+\definecolor{subtitle}{RGB}{102,255,204}
+\definecolor{hilight}{RGB}{102,255,204}
+\definecolor{vhilight}{RGB}{255,111,207}
+\definecolor{lolight}{RGB}{155,155,155}
+\definecolor{blue}{RGB}{30, 144, 255}
+\definecolor{orange}{RGB}{255, 140, 0}
+%\definecolor{green}{RGB}{125,250,125}
+
+% use those colors
+\setbeamercolor{titlelike}{fg=title}
+\setbeamercolor{subtitle}{fg=subtitle}
+\setbeamercolor{institute}{fg=gray}
+\setbeamercolor{normal text}{fg=foreground,bg=background}
+\setbeamercolor{item}{fg=foreground} % color of bullets
+\setbeamercolor{subitem}{fg=gray}
+\setbeamercolor{itemize/enumerate subbody}{fg=gray}
+\setbeamertemplate{itemize subitem}{{\textendash}}
+\setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
+\setbeamerfont{itemize/enumerate subitem}{size=\footnotesize}
+
 % page number
 \setbeamertemplate{footline}{%
   \raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[20pt]{\color{gray}
@@ -21,7 +47,10 @@
 \addtobeamertemplate{note page}{\setlength{\parskip}{12pt}}
 
 % a few macros
-
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\ig}{\includegraphics}
+\newcommand{\subt}[1]{{\footnotesize \color{subtitle} {#1}}}
 
 % title into
 \title{Functional X}
@@ -36,5 +65,20 @@
   \note{These are slides for a talk I will give on XX XXX 202X, at ...}
 }
 }
+
+\begin{frame}{Greatest Common Divisor (GCD)}
+    \centering
+    \Large % Increase font size
+    \textcolor{orange}{\[
+        \gcd : (\mathbb{N} \times \mathbb{N}) \to \mathbb{N}
+    \]}
+        \vspace{0.5cm} % Add spacing
+    \textcolor{blue}{
+        \begin{align*}
+            \gcd(m,n) &= \max \big\{ d \in \mathbb{N} \mid \\
+            &\quad m \bmod d = 0 \wedge n \bmod d = 0 \big\}
+        \end{align*}
+    }
+\end{frame}
 
 \end{document}
