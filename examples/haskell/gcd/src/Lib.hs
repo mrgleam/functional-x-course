@@ -1,9 +1,9 @@
 module Lib
-    ( gcdList
+    ( gcd'
     ) where
 
 import Numeric.Natural (Natural)
 
-gcdList :: Natural -> Natural -> Natural
-gcdList a b = maximum [d | d <- [1..min a b], a `mod` d == 0, b `mod` d == 0]
+gcd' :: Natural -> Natural -> Natural
+gcd' a b = maximum [d | d <- [1..min a b], a `mod` d == 0, b `mod` d == 0]
 
