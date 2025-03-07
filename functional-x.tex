@@ -1,5 +1,5 @@
 \documentclass[12pt,t]{beamer}
-\usepackage{amsmath, amssymb, graphicx}
+\usepackage{minted, amsmath, amssymb, graphicx}
 \setbeameroption{hide notes}
 \setbeamertemplate{note page}[plain]
 
@@ -95,6 +95,39 @@
 \end{cases}
 \]
 
+\end{frame}
+
+\begin{frame}[fragile]{Function Schema}
+\begin{center}
+\vfill
+\begin{minted}[frame=single, escapeinside=@@, bgcolor=lightgray, fontsize=\footnotesize, linenos]{haskell}
+-- Haskell function schema
+f :: t@$_1$@ -> ... t@$_n$@ -> t@$_r$@
+f x@$_1$@ ... x@$_n$@ = if p then g else h
+  where
+    -- The expression p is a predicate in x@$_1$@ ...x@$_n$@
+    p = x@$_1$@ > 0
+    -- The expression g and h are expression involving
+    -- the values x@$_1$@ ...x@$_n$@
+    g = f x@$_2$@ (x@$_1$@ `mod` x@$_2$@)
+    h = x@$_1$@
+\end{minted}
+\vfill
+\end{center}
+\end{frame}
+
+\begin{frame}{Function Schema}
+\vfill
+\begin{center}
+\begin{itemize}
+  \item The symbolic name \emph{f} stands for the name of the function to be captured.
+  \item The number \emph{f} gives the number of arguments of the function \emph{f}.
+  \item The \emph{x$_1$ ...x$_n$} are the arguments of \emph{f}.
+  \item The \emph{t$_1$ ...t$_n$} are the types of the arguments \emph{x$_1$ ...x$_n$} respectively.
+  \item The type of the function result is \emph{t$_r$}.
+\end{itemize}
+\end{center}
+\vfill
 \end{frame}
 
 \end{document}

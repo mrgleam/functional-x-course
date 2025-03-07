@@ -1,5 +1,5 @@
 functional-x.pdf: functional-x.tex
-	xelatex functional-x
+	xelatex --shell-escape functional-x
 
 clean:
 	rm functional-x.pdf

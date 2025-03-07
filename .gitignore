@@ -4,4 +4,7 @@
 *.out
 *.snm
 *.toc
+*.swp
 functional-x.pdf
+functional-x.vrb
+_minted-functional-x
