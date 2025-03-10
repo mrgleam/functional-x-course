@@ -130,4 +130,21 @@ f x@$_1$@ ... x@$_n$@ = if p then g else h
 \vfill
 \end{frame}
 
+\begin{frame}[fragile]{Rust Function Schema}
+\begin{center}
+\vfill
+\begin{minted}[frame=single, escapeinside=@@, bgcolor=lightgray, fontsize=\footnotesize, linenos]{hs}
+-- Rust function schema
+fn f(x@$_1$@: t@$_1$@, ..., x@$_n$@: t@$_n$@) -> t@$_r$@ {
+    if p {
+        return g;
+    } else {
+        return h;
+    }
+}
+\end{minted}
+\vfill
+\end{center}
+\end{frame}
+
 \end{document}
