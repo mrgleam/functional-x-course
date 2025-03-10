@@ -147,4 +147,33 @@ fn f(x@$_1$@: t@$_1$@, ..., x@$_n$@: t@$_n$@) -> t@$_r$@ {
 \end{center}
 \end{frame}
 
+\begin{frame}{Table of Correspondence}
+\begin{center}
+\vfill
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Schema}    & \textbf{Functional}                & \textbf{Rust}                            \\
+        \hline
+        \emph{f:}        & \texttt{euclid}                    & \texttt{euclid}                          \\
+        \hline
+        \emph{t$_1$:}       & \texttt{Natural}                   & \texttt{u32}                             \\
+        \hline
+        \emph{t$_2$:}       & \texttt{Natural}                   & \texttt{u32}                             \\
+        \hline
+        \emph{t$_r$:}       & \texttt{Natural}                   & \texttt{u32}                             \\
+        \hline
+        \emph{x$_1$:}       & \texttt{m}                         & \texttt{m}                               \\
+        \hline
+        \emph{x$_2$:}       & \texttt{n}                         & \texttt{n}                               \\
+        \hline
+    \end{tabular}
+    \caption{Table of Correspondence}
+\end{table}
+\vfill
+\end{center}
+\end{frame}
+
 \end{document}
