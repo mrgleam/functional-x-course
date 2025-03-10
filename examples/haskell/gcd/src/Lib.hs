@@ -10,7 +10,7 @@ gcd' :: Natural -> Natural -> Natural
 gcd' a b = maximum [d | d <- [1..min a b], a `mod` d == 0, b `mod` d == 0]
 
 euclid :: Natural -> Natural -> Natural
-euclid a b = if b > 0 then euclid b (a `mod` b) else a
+euclid m n = if n > 0 then euclid n (m `mod` n) else m
 
 euclid' :: Natural -> Natural -> Natural
 euclid' a b 
